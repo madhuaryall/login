@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login form</title>
+<link rel="stylesheet"  href="style.css">
+<script src="https://kit.fontawesome.com/0402136bb1.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <a href="url">login page</a>
+    <div class="container">
+
+    
+    <div class="form-box">
+
+        <h1 id="title">Login</h1>
+
+
+        <form>
+
+            <div class="input-group">
+                <div class="input-field" id="namefield">
+                <i class="fa-solid fa-user"></i>
+                <input type="text" placeholder="Name">
+
+                </div>
+
+                <div class="input-field">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="email">
+
+                </div>
+
+                <div class="input-field">
+                <i class="fa-solid fa-lock"></i>
+                <input type="password" placeholder="password">
+
+                </div>
+                <p> Forgot password <a href="#">Click Here! </a></p>
+
+            </div>
+            <div class="btn-field">
+                <button type="button" id="loginBtn">Login</button>
+                <button type="button" id="createnewaccountBtn"  class="disable">Create new account</button>
+            </div>
+        </form>
+    </div>
+    <script>
+
+        let loginBtn = document.getElementById("loginBtn");
+        let createnewaccountBtn = document.getElementById("createnewaccountBtn");
+        let namefield = document.getElementById("namefield");
+        let title = document.getElementById("title");
+
+     createnewaccountBtn.onclick = function(){
+     namefield.style.maxHeight ="0";
+    title.innerHTML = "create new account";
+loginBtn.classList.add("disable");
+createnewaccountBtn.classList.remove("disable");
+}
+loginBtn.onclick = function(){
+     namefield.style.maxHeight ="65px";
+    title.innerHTML = "create new account";
+loginBtn.classList.remove("disable");
+createnewaccountBtn.classList.add("disable");
+}
+
+
+       
+        
+
+    </script>
+
+</body>
+</html>
